@@ -1,5 +1,7 @@
 "use client";
 
+import { Card } from "@/components/card";
+import { motion } from "framer-motion";
 import React from "react";
 
 export default function Home() {
@@ -31,9 +33,9 @@ export default function Home() {
   
   return (
     <main>
-      <div>
-        Index
-      </div>
+      <motion.div exit={{ opacity: 0 }}>
+        <Card title="Home page title" contents="Home page contents" />
+      </motion.div>
     </main>
   )
 }

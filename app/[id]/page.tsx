@@ -1,5 +1,6 @@
 "use client";
 
+import { Card } from "@/components/card";
 import React from "react";
 
 export default function Home() {
@@ -15,9 +16,7 @@ export default function Home() {
 
   return (
     <main>
-      <div>
-        Hello
-      </div>
+      <Card title="Detail page" contents="Detail page contents" />
     </main>
   )
 }
