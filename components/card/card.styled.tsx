@@ -6,7 +6,7 @@ export const Card = styled.div`
   max-width: 10rem;
   color: #333;
   border-radius: 1rem;
-  box-shadow: 0 0 5px #000;
+  box-shadow: ${props => { console.log(props); return `0 0 5px #000`}};
 `;
 
 export const Header = styled.div``;
