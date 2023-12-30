@@ -20,7 +20,7 @@ export const UploadForm = ({ ...props }) => {
             <h3>Click here to select image</h3>
             <p>Maximum file size 20mb</p>
             {file && <p>{file.name}</p>}
-            <input type="file" name="image" accept="image/jpeg" onChange={(e) => updateFile(e.target.files?.[0])} />
+            <input type="file" name="image" accept="image/png" onChange={(e) => updateFile(e.target.files?.[0])} />
           </Styles.FileUpload>
         </Styles.Parent>
         {!isUpload?.success && <Styles.UploadButton>{pending ? `Uploading...` : `Upload`}</Styles.UploadButton>}
