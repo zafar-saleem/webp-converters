@@ -7,8 +7,8 @@ import Link from "next/link";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "JPG Image Converter | Convert JPG Images to PNG, Webp, TIFF, Gif etc online for free",
-  description: "Convert JPG images to PNG, Webp, TIFF, Gif etc for free. JPG converter is fast, secure and almost 100% accurate. Convert scanned JPG to variety of formats while keeping the original quality.",
+  title: "PNG Image Converter | Convert PNG Images to JPG, Webp, TIFF, Gif, HEIC etc online for free",
+  description: "Convert PNG images to JPG, Webp, TIFF, Gif, HEIC etc for free. PNG converter is fast, secure and almost 100% accurate. Convert scanned PNG to variety of formats while keeping the original quality.",
 }
 
 export default function RootLayout({
