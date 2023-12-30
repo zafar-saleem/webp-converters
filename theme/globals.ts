@@ -11,12 +11,12 @@ export const GlobalStyles = createGlobalStyle`
   html,
   body {
     ${{...reset}};
-    color: #e7e7e7;
+    color: #333333;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 500;
     width: 100vw;
-    background-color: #4e4c52;
+    background-color: #ffffff;
   }
 
   a {

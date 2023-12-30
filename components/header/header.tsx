@@ -1,7 +1,10 @@
-import React from "react"
+"use client";
+
+import React from "react";
+import * as Styles from "./header.styles";
 
 export const Header = ({ children }: React.PropsWithChildren) => {
   return (
-    <div>{children}</div>
+    <Styles.Header>{children}</Styles.Header>
   )
 }

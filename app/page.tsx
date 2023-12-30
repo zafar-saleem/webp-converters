@@ -1,41 +1,22 @@
 "use client";
 
-import { Card } from "@/components/card";
-import { motion } from "framer-motion";
 import React from "react";
+import { labels } from "./converter-labels";
+import * as Styles from "./page.styles";
 
 export default function Home() {
-  React.useEffect(() => {
-    const fetcher = async () => {
-      const request = await fetch("/api?message='GET Request'", {
-        headers: {
-          "content-type": "application/json"
-        }
-      });
-      const json = await request.json();
-      console.log(json);
-    }
-
-    const post = async () => {
-      const request = await fetch("/api", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({ message: "POST request" }),
-      });
-      const json = await request.json();
-      console.log(json);
-    }
-    fetcher();
-    post();
-  });
-  
   return (
-    <main>
-      <motion.div exit={{ opacity: 0 }}>
-        <Card title="Home page title" contents="Home page contents" />
-      </motion.div>
-    </main>
+    <Styles.Main>
+      <Styles.Grid>
+      {
+        labels?.map((item) => (
+          <Styles.Lynk key={item.label} href={item.path} color={item.color}>
+            {/* <Image src={item.icon} width={128} height={128} alt="jpg to png image converter" /> */}
+            {item.label}
+          </Styles.Lynk>
+        ))
+      }
+      </Styles.Grid>
+    </Styles.Main>
   )
 }
