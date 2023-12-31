@@ -7,8 +7,8 @@ import Link from "next/link";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "PNG Image Converter | Convert PNG Images to JPG, Webp, TIFF, Gif, HEIC etc online for free",
-  description: "Convert PNG images to JPG, Webp, TIFF, Gif, HEIC etc for free. PNG converter is fast, secure and almost 100% accurate. Convert scanned PNG to variety of formats while keeping the original quality.",
+  title: "Webp Image Converter | Convert Webp Images to JPG, PNG, TIFF, Gif, HEIC etc online for free",
+  description: "Convert Webp images to JPG, PNG, TIFF, Gif, HEIC etc for free. Webp converter is fast, secure and almost 100% accurate. Convert scanned Webp to variety of formats while keeping the original quality. Learn more",
 }
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
         <Providers>
           <Header>
             <Link href="/">
-              <Image src="/image-converter-logo.webp" width={300} height={28} alt="" />
+              <Image src="/image-converter-logo.webp" width={300} height={28} alt="Webp Image Converter" />
             </Link>
           </Header>
           <GlobalStyles />
