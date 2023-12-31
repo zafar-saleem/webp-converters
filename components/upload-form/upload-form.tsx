@@ -1,5 +1,6 @@
 import { useService } from "@/hooks";
 import * as Styles from "./upload-form.styles";
+import { RenderButtons } from "../buttons/render-buttons";
 
 export const UploadForm = ({ ...props }) => {
   const {
@@ -10,6 +11,21 @@ export const UploadForm = ({ ...props }) => {
     file,
     isUpload,
   } = useService({ ...props });
+  let btnType, btnProps;
+
+  if (isUpload.success) {
+    btnType = "download";
+    btnProps = {
+      pending,
+      handleDownload,
+      type: props.type,
+    };
+  } else {
+    btnType = "upload";
+    btnProps = {
+      pending,
+    };
+  }
 
   return (
     <Styles.Container>
@@ -23,13 +39,7 @@ export const UploadForm = ({ ...props }) => {
             <input type="file" name="image" accept="image/webp" onChange={(e) => updateFile(e.target.files?.[0])} />
           </Styles.FileUpload>
         </Styles.Parent>
-        {!isUpload?.success && <Styles.UploadButton>{pending ? `Uploading...` : `Upload`}</Styles.UploadButton>}
-        {
-          isUpload?.success && <Styles.DownloadButton href="#" passHref legacyBehavior>
-            {/* @ts-ignore */}
-            <Styles.DownloadButton onClick={handleDownload}>{pending? `Downloading...` : `Download ${props.type.toUpperCase()}`}</Styles.DownloadButton>
-          </Styles.DownloadButton>
-        }
+        {RenderButtons[btnType]({ ...btnProps })}
       </form>
     </Styles.Container>
   )
