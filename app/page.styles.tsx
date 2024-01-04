@@ -9,6 +9,10 @@ export const Main = styled.main`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
+  @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
+    height: 100dvh;
+  }
 `;
 
 export const Grid = styled.div`

@@ -24,7 +24,7 @@ export const Footer = styled.footer`
     position: relative;
     text-align: center;
     width: 100vw;
-    top: 15vh;
+    top: 0;
     left: 0;
     color: #ccc;
     padding: 1rem;
